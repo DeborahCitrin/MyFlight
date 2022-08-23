@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class GerenciadorVoos {
     ArrayList<Voo> voos = new ArrayList<Voo>();
@@ -14,7 +14,16 @@ public class GerenciadorVoos {
         }
     }
 
-    public static void buscarData(LocalDate data) {
+    public Voo buscarData(LocalDateTime data) 
+    {
+        for (int i=0; i<voos.size(); i++)
+        {
+            if (data == voos.get(i).getDatahora())
+            {
+                return voos.get(i);
+            }
+        }
+        return null;
 
     }
 }
