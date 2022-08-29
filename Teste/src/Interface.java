@@ -1,0 +1,4 @@
+interface Contavel 
+{
+    int contar();
+}

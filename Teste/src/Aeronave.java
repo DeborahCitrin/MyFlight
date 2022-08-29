@@ -1,8 +1,11 @@
-public class Aeronave {
+public class Aeronave implements Contavel{
+
+	private static int totalAeronaves = 0;
 	private String codigo;
 	private String descricao;
 	
 	public Aeronave(String codigo, String descricao) {
+		totalAeronaves++;
 		this.codigo = codigo;
 		this.descricao = descricao;
 	}
@@ -15,5 +18,8 @@ public class Aeronave {
 		return descricao;
 	}
 
-	//outro teste
+	public int contar()
+	{
+		return totalAeronaves;
+	}
 }
