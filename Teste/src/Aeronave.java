@@ -14,6 +14,4 @@ public class Aeronave {
 	public String getDescricao() {
 		return descricao;
 	}
-
-	//oi
 }
