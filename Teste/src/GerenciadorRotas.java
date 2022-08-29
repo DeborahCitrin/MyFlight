@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GerenciadorRotas 
 {
@@ -24,6 +25,11 @@ public class GerenciadorRotas
             }
         }
         return null;
+    }
+
+    public void ordenaNome()
+    {
+        Collections.sort(rotas);
     }
 
 }
