@@ -11,5 +11,10 @@ public class VooVariasEscalas extends Voo
         super(rota, datahora, duracao);
         escalas = new ArrayList<Rota>();
     }
+
+    public void inserirEscala(Rota rotaEscala)
+    {
+        escalas.add(rotaEscala);
+    }
     
 }
