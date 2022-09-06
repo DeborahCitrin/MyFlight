@@ -7,7 +7,7 @@ public class VooEscalas extends Voo
 
     public VooEscalas(Rota rota, Rota rotaFinal, LocalDateTime datahora, Duration duracao)
     {
-        super(rota, datahora,duracao);
+        super(rota, datahora, duracao);
         this.rotaFinal = rotaFinal;
     }
 
