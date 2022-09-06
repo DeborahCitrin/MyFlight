@@ -4,16 +4,12 @@ import java.util.ArrayList;
 
 public class VooVariasEscalas extends Voo
 {
-    private ArrayList<Escala> escalas;  
+    private ArrayList<Rota> escalas;  
 
     public VooVariasEscalas(Rota rota, LocalDateTime datahora, Duration duracao)
     {
         super(rota, datahora, duracao);
-        escalas = new ArrayList<Escala>();
-    }
-
-    public void inserirEscala()
-    {
+        escalas = new ArrayList<Rota>();
     }
     
 }
