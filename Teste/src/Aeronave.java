@@ -18,7 +18,8 @@ public class Aeronave implements Contavel{
 		return descricao;
 	}
 
-	public int contar()
+	@Override
+	public int contar() 
 	{
 		return totalAeronaves;
 	}
