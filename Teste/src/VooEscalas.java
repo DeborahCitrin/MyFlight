@@ -11,6 +11,14 @@ public class VooEscalas extends Voo
         this.rotaFinal = rotaFinal;
     }
 
+    public void adicionaRota(Rota rota){
+
+    }
+
+    public Duration getDuracao(){
+        
+    }
+
     public Rota getRotaFinal()
     {
         return rotaFinal;
