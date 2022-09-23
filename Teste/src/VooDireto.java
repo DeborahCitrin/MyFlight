@@ -35,4 +35,8 @@ public class VooDireto extends Voo{
         return super.toString() + "Duração: " + getDuracao().toString() + 
         ", Origem: " +getRota().getOrigem().getCodigo() + ", Destino: " +getRota().getDestino().getCodigo();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a457f68253b970dcc404bd9bd861e077bb9703b4

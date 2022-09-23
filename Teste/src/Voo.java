@@ -61,4 +61,8 @@ public abstract class Voo {
 		return "Duração: " + getDuracao().toString() + ", Data e horário de saída: " + getDatahora().toString()
 		+ ", Origem: " +getRota().getOrigem().getCodigo() + ", Destino: " +getRota().getDestino().getCodigo(); 
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a457f68253b970dcc404bd9bd861e077bb9703b4
