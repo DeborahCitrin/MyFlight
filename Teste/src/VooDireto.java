@@ -13,6 +13,7 @@ public class VooDireto extends Voo{
         this.rota = rota;
     }
 
+    @Override
     public Duration getDuracao()
     {
         double distancia = rota.getOrigem().getLocal().distancia(rota.getDestino().getLocal());
@@ -22,8 +23,16 @@ public class VooDireto extends Voo{
         return Duration.ofMinutes(tempo+30);
     }
 
+    @Override
     public Rota getRota()
     {
         return rota;
+    }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + "Duração: " + getDuracao().toString() + 
+        ", Origem: " +getRota().getOrigem().getCodigo() + ", Destino: " +getRota().getDestino().getCodigo();
     }
 }
