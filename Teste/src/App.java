@@ -16,10 +16,10 @@ public class App
         Rota rota = new Rota(companhia, salgadoFilho, Congonhas, aviao);
 
         //teste primeiro construtor da classe Voo
-        Voo voo = new Voo(rota, LocalDateTime.of(2022, 12, 5, 10, 20, 50), Duration.ofHours(2));
+        //Voo voo = new Voo(rota, LocalDateTime.of(2022, 12, 5, 10, 20, 50), Duration.ofHours(2));
 
         //teste segundo construtor da classe Voo
-        Voo voo1 = new Voo(rota, Duration.ofHours(3));
+        //Voo voo1 = new Voo(rota, Duration.ofHours(3));
 
         //teste método static distância da classe Geo
         Geo outrolocal = new Geo(567, 425);
@@ -41,13 +41,13 @@ public class App
         aviao2.contar();
 
         //teste VooEscalas
-        VooEscalas vooEscalas = new VooEscalas(rota, rota1, LocalDateTime.of(2022, 9, 9, 18, 24, 6), Duration.ofHours(1));
+        //VooEscalas vooEscalas = new VooEscalas(rota, rota1, LocalDateTime.of(2022, 9, 9, 18, 24, 6), Duration.ofHours(1));
 
         //teste VooVariasEscalas
         Rota rota2 = new Rota(companhia, Congonhas, salgadoFilho, aviao2);
-        VooVariasEscalas voo2 = new VooVariasEscalas(rota, LocalDateTime.of(2022, 8, 15, 2, 40, 45), Duration.ofMinutes(40));
-        voo2.inserirEscala(rota1);
-        voo2.inserirEscala(rota2);
+        //VooVariasEscalas voo2 = new VooVariasEscalas(rota, LocalDateTime.of(2022, 8, 15, 2, 40, 45), Duration.ofMinutes(40));
+        // voo2.inserirEscala(rota1);
+        // voo2.inserirEscala(rota2);
 
         //teste OrdenaNome GerenciadorAeroportos - Nao quero.
         // GerenciadorAeroportos.ordenaNome();
@@ -71,8 +71,17 @@ public class App
 
         // System.out.println(voo2.toString());
 
-        System.out.println(vooEscalas.toString());
-        
+        // System.out.println(vooEscalas.toString());
+
+        //TESTANDO VOO NOVO
+        VooDireto vood = new VooDireto(LocalDateTime.of(2022, 12, 5, 10, 20, 50), rota);
+        System.out.println(vood.toString());
+
+        VooEscalas vooe = new VooEscalas(LocalDateTime.of(2022, 12, 5, 10, 20, 50));
+        vooe.adicionaRota(rota1);
+        vooe.adicionaRota(rota2);
+        System.out.println(vooe.toString());
+
     }
     
 }
