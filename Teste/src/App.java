@@ -1,16 +1,70 @@
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 public class App 
 {
     public static void main(String[] args) 
     {
-        Aeronave aviazinho = new Aeronave("codigo", "descricao");
+        Aeronave aviao = new Aeronave("codigo", "descricao");
 
-        CiaAerea ajuda = new CiaAerea("codigocia", "nomecia");
-        Geo loca = new Geo(123, 456);
-        Aeroporto salgadoFilho = new Aeroporto("salgadinho", "nomeSalga", loca);
+        CiaAerea companhia = new CiaAerea("codigocia", "nomecia");
+        Geo local = new Geo(123, 456);
+        Geo local1 = new Geo(557, 390);
+        Aeroporto Congonhas = new Aeroporto("CON", "concon", local1);
+        Aeroporto salgadoFilho = new Aeroporto("salgadinho", "nomeSalga", local);
 
-        Rota socoror = new Rota(ajuda, salgadoFilho, salgadoFilho, aviazinho);
+        Rota rota = new Rota(companhia, salgadoFilho, Congonhas, aviao);
 
-        // Voo voo1 = new Voo(socoror, datahora, duracao)
+        //teste primeiro construtor da classe Voo
+        Voo voo = new Voo(rota, LocalDateTime.of(2022, 12, 5, 10, 20, 50), Duration.ofHours(2));
+
+        //teste segundo construtor da classe Voo
+        Voo voo1 = new Voo(rota, Duration.ofHours(3));
+
+        //teste método static distância da classe Geo
+        Geo outrolocal = new Geo(567, 425);
+        double distancia1 = Geo.distancia(local, outrolocal);
+
+        //teste método não static distância da classe Geo
+        double distancia2 = local.distancia(outrolocal);
+
+        //teste interface CompareTo Aeroporto
+        Aeroporto Guarulhos = new Aeroporto("GRU", "guagua", outrolocal);
+        Guarulhos.compareTo(salgadoFilho);
+
+        //teste interface CompareTo Rota
+        Rota rota1 = new Rota(companhia, Guarulhos, Congonhas, aviao);
+        rota1.compareTo(rota);
+
+        //teste interface Contavel Aeronave
+        Aeronave aviao2 = new Aeronave("1234", "azul");
+        aviao2.contar();
+
+        //teste VooEscalas
+        VooEscalas vooEscalas = new VooEscalas(rota, rota1, LocalDateTime.of(2022, 9, 9, 18, 24, 6), Duration.ofHours(1));
+
+        //teste VooVariasEscalas
+        Rota rota2 = new Rota(companhia, Congonhas, salgadoFilho, aviao2);
+        VooVariasEscalas voo2 = new VooVariasEscalas(rota, LocalDateTime.of(2022, 8, 15, 2, 40, 45), Duration.ofMinutes(40));
+        voo2.inserirEscala(rota1);
+        voo2.inserirEscala(rota2);
+
+        //testes que precisamos fazer:
+        //arrumar voo - FEITO
+        //arrumar teste segundo construtor voo - FEITO
+
+        //calcular distância classe geo - static e não static - FEITO 
+        //testar CompareTo Aeroporto - FEITO
+        //testar CompareTo Rota - FEITO
+
+        //testar método ordenaNome em GerenciadorAeroportos
+        //testar método ordenaNome em GerenciadorRotas
+
+        //testar interface contavel aeronave - FEITO
+
+        //testar VooVariasEscalas - FEITO
+        //fazer toString em VooVariasEscalas
+        //testar VooEscalas
 
         
     }
