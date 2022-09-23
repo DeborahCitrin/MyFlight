@@ -19,6 +19,6 @@ public class VooEscalas extends Voo
     @Override
     public String toString()
     {
-        return super.toString() + " -> " + rotaFinal;
+        return super.toString() + " -> " + rotaFinal.getDestino().getCodigo();
     }
 }

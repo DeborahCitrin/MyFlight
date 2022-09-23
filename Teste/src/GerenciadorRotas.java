@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class GerenciadorRotas 
 {
-    ArrayList<Rota> rotas = new ArrayList<>();
+    private static ArrayList<Rota> rotas = new ArrayList<>();
 
     public void adicionar(Rota rota)
     {
@@ -27,7 +27,7 @@ public class GerenciadorRotas
         return null;
     }
 
-    public void ordenaNome()
+    public static void ordenaNome()
     {
         Collections.sort(rotas);
     }

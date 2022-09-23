@@ -49,6 +49,9 @@ public class App
         voo2.inserirEscala(rota1);
         voo2.inserirEscala(rota2);
 
+        //teste OrdenaNome GerenciadorAeroportos - Nao quero.
+        // GerenciadorAeroportos.ordenaNome();
+
         //testes que precisamos fazer:
         //arrumar voo - FEITO
         //arrumar teste segundo construtor voo - FEITO
@@ -63,9 +66,12 @@ public class App
         //testar interface contavel aeronave - FEITO
 
         //testar VooVariasEscalas - FEITO
-        //fazer toString em VooVariasEscalas
-        //testar VooEscalas
+        //fazer toString em VooVariasEscalas - FEITO
+        //testar VooEscalas - FEITO
 
+        // System.out.println(voo2.toString());
+
+        System.out.println(vooEscalas.toString());
         
     }
     

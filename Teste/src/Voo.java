@@ -43,4 +43,10 @@ public class Voo {
 	public void setStatus(Status novo) {
 		this.status = novo;
 	}
+
+	public String toString()
+	{
+		return "Duração: " + getDuracao().toString() + ", Data e horário de saída: " + getDatahora().toString() + 
+		", Status: "+ getStatus().toString() + ", Origem: " +getRota().getOrigem().getCodigo() + ", Destino: " +getRota().getDestino().getCodigo();
+	}
 }

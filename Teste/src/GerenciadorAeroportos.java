@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class GerenciadorAeroportos 
 {
-    private ArrayList<Aeroporto> aeroportos = new ArrayList<>();
+    private static ArrayList<Aeroporto> aeroportos = new ArrayList<>();
 
     public void adicionar(Aeroporto aero)
     {
@@ -27,7 +27,7 @@ public class GerenciadorAeroportos
         return null;
     }
 
-    public void ordenaNome()
+    public static void ordenaNome()
     {
         Collections.sort(aeroportos);
     }
