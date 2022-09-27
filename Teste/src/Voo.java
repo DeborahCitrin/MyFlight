@@ -1,3 +1,9 @@
+//Deborah e Pietra
+//criamos dois construtores, um que recebe a rota, data+horário e a duração e outro que não recebe a data+horário - 30/08
+//modificamos a classe para uma classe abstrata, que é uma classe onde há falta de implementação de alguns métodos (nesse caso, o getRota e o getDuracao) - 23/09
+//deixamos a classe com somente um construtor que recebe como parâmetro uma variável do tipo LocalDateTime - 23/09
+//adicionamos um toString para podermos testar na classe App - 23/09
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 

@@ -1,3 +1,7 @@
+//todos os exercícios foram feitos em conjunto (pela Deborah e pela Pietra, portanto, haverá o nome das duas em todas as classes modificadas)
+//Deborah e Pietra
+//Na App fizemos os testes de todas as classes do programa
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 

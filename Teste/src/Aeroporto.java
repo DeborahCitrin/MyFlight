@@ -1,3 +1,6 @@
+//Deborah e Pietra
+//fizemos com que a classe implementasse a interface Comparable, da API Java. Sendo assim, a classe agora implementa um método compareTo, o que permite que ela faça uma comparação entre seus elementos. Nesse caso, a ordenação é feita pelo nome do aeroporto - 30/08
+
 public class Aeroporto implements Comparable<Aeroporto>{
 	private String codigo;
 	private String nome;
@@ -21,7 +24,6 @@ public class Aeroporto implements Comparable<Aeroporto>{
 		return loc;
 	}
 
-	@Override
 	public int compareTo(Aeroporto o) 
 	{
 		return nome.compareTo(o.nome);

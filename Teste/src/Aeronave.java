@@ -1,3 +1,6 @@
+//Deborah e Pietra 
+//fizemos a classe Aeronave implementar a interface Contavel, sendo assim, a classe deve ter um método chamado contar() que retorne o total de objetos do tipo Aeronave já criados - 30/08
+
 public class Aeronave implements Contavel{
 
 	private static int totalAeronaves = 0;
@@ -18,7 +21,6 @@ public class Aeronave implements Contavel{
 		return descricao;
 	}
 
-	@Override
 	public int contar() 
 	{
 		return totalAeronaves;

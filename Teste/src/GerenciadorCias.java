@@ -1,3 +1,9 @@
+//Deborah e Pietra
+//criamos o método adicionar, que recebe um objeto do tipo Companhia como parâmetro e o adiciona ao Arraylist de empresas - 23/08
+//criamos o método listarTodas, que lista o Arraylist de empresas - 23/08
+//criamos o método buscarPorCodigo, que retorna a Companhia que possui determinado código - 23/08
+//criamos o método buscarPorNome, que retorna a Companhia com determinado nome - 23/08
+
 import java.util.ArrayList;
 
 public class GerenciadorCias {
@@ -17,7 +23,7 @@ public class GerenciadorCias {
 	{
 		return empresas;
 	}
-	//teste
+	
 	public CiaAerea buscarPorCodigo(String cod)
 	{
 		for (int i=0; i<empresas.size(); i++)

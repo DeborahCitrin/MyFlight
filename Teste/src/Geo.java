@@ -1,3 +1,6 @@
+//Deborah e Pietra
+//adicionamos os métodos distância na classe. Um deles é estático e recebe dois objetos do tipo Geo e retorna a distância entre eles e o outro não é estático e recebe somente um objeto e retorna a distância entre esse objeto e os dados armazenados - 30/08 e 12/09
+
 import java.lang.Math;
 
 public class Geo {
@@ -19,13 +22,13 @@ public class Geo {
 
 	public static double distancia(Geo a, Geo b)
 	{
-		double senLat = Math.sin((a.getLatitude()-b.getLatitude())/2);
+		double senLat = Math.sin((Math.toRadians(a.getLatitude()) - Math.toRadians(b.getLatitude()))/2);
 		senLat *= senLat;
 
-		double senLong = Math.sin((a.getLongitude() - b.getLongitude())/2);
+		double senLong = Math.sin((Math.toRadians(a.getLongitude()) - Math.toRadians(b.getLongitude()))/2);
 		senLong *= senLong;
 
-		double vezes = senLong * Math.cos(a.getLatitude()) * Math.cos(b.getLatitude());
+		double vezes = senLong * Math.cos(Math.toRadians(a.getLatitude())) * Math.cos(Math.toRadians(b.getLatitude()));
 
 		double soma = senLat + vezes;
 		soma = Math.sqrt(soma);
