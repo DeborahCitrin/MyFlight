@@ -12,8 +12,8 @@ public class App
         Aeronave aviao = new Aeronave("codigo", "descricao");
 
         CiaAerea companhia = new CiaAerea("codigocia", "nomecia");
-        Geo local = new Geo(123, 456);
-        Geo local1 = new Geo(557, 390);
+        Geo local = new Geo(-22.9035, -43.2096);
+        Geo local1 = new Geo(-30.033056, -51.230000);
         Aeroporto Congonhas = new Aeroporto("CON", "concon", local1);
         Aeroporto salgadoFilho = new Aeroporto("salgadinho", "nomeSalga", local);
 
@@ -28,9 +28,11 @@ public class App
         //teste método static distância da classe Geo
         Geo outrolocal = new Geo(567, 425);
         double distancia1 = Geo.distancia(local, outrolocal);
+        System.out.println(distancia1);
 
         //teste método não static distância da classe Geo
         double distancia2 = local.distancia(outrolocal);
+        System.out.println(distancia2);
 
         //teste interface CompareTo Aeroporto
         Aeroporto Guarulhos = new Aeroporto("GRU", "guagua", outrolocal);
@@ -53,25 +55,8 @@ public class App
         // voo2.inserirEscala(rota1);
         // voo2.inserirEscala(rota2);
 
-        //teste OrdenaNome GerenciadorAeroportos - Nao quero.
-        // GerenciadorAeroportos.ordenaNome();
-
-        //testes que precisamos fazer:
-        //arrumar voo - FEITO
-        //arrumar teste segundo construtor voo - FEITO
-
-        //calcular distância classe geo - static e não static - FEITO 
-        //testar CompareTo Aeroporto - FEITO
-        //testar CompareTo Rota - FEITO
-
-        //testar método ordenaNome em GerenciadorAeroportos
-        //testar método ordenaNome em GerenciadorRotas
-
-        //testar interface contavel aeronave - FEITO
-
-        //testar VooVariasEscalas - FEITO
-        //fazer toString em VooVariasEscalas - FEITO
-        //testar VooEscalas - FEITO
+        //teste OrdenaNome GerenciadorAeroportos
+        //GerenciadorAeroportos.ordenaNome();
 
         // System.out.println(voo2.toString());
 

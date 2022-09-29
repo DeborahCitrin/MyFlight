@@ -38,20 +38,17 @@ public class Geo {
 
 	public double distancia(Geo outro)
 	{
-		double senLat = Math.sin((this.getLatitude() - outro.getLatitude())/2);
+		double senLat = Math.sin(Math.toRadians((this.getLatitude()) - Math.toRadians(outro.getLatitude()))/2);
 		senLat *= senLat;
 
-		double senLong = Math.sin((this.getLongitude() - outro.getLongitude())/2);
+		double senLong = Math.sin(Math.toRadians((this.getLongitude()) - Math.toRadians(outro.getLongitude()))/2);
 		senLong *= senLong;
 
-		double vezes = senLong * Math.cos(this.getLatitude()) * Math.cos(outro.getLatitude());
+		double vezes = senLong * Math.cos(Math.toRadians(this.getLatitude())) * Math.cos(Math.toRadians(outro.getLatitude()));
 
 		double soma = senLat + vezes;
 		soma = Math.sqrt(soma);
 
 		return 2 * 6371 * (Math.asin(Math.sqrt(soma)));
 	}
-
-	//Ver o exercício 2 do Sobregarga... 
-	//Dados Armazenados??
 }
