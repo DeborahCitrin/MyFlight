@@ -22,9 +22,9 @@ public class VooDireto extends Voo{
     @Override
     public Duration getDuracao()
     {
-        double distancia = rota.getOrigem().getLocal().distancia(rota.getDestino().getLocal());
-        long auxDis = Math.round(distancia);
-        long tempo = auxDis/805;
+        double distancia = Geo.distancia(rota.getOrigem().getLocal(),rota.getDestino().getLocal());
+        double auxDis = (distancia/805) * 60;
+        long tempo = Double.valueOf(auxDis).longValue();
 
         return Duration.ofMinutes(tempo+30);
     }

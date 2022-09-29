@@ -57,11 +57,11 @@ public class VooEscalas extends Voo
         double distancia = 0;
         for (int i=0; i<rotas.size(); i++)
         {
-            distancia += rotas.get(i).getOrigem().getLocal().distancia(rotas.get(i).getDestino().getLocal());
+            distancia += Geo.distancia(rotas.get(i).getOrigem().getLocal(),rotas.get(i).getDestino().getLocal());
         }
         
-        long auxDis = Math.round(distancia);
-        long tempo = auxDis/805;
+        double auxDis = (distancia/805) * 60;
+        long tempo = Double.valueOf(auxDis).longValue();
 
         return Duration.ofMinutes(tempo+(rotas.size()*30));
     }

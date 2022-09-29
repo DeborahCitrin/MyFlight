@@ -29,5 +29,9 @@ public class Aeroporto implements Comparable<Aeroporto>{
 		return nome.compareTo(o.nome);
 	}
 
+	public String toString(){
+		return String.format("%5s %-15s ", getCodigo(),getNome());  
+	}
+
 
 }

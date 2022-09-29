@@ -14,12 +14,9 @@ public class GerenciadorAeronaves
         aeronaves.add(aviao);
     }
 
-    public void listarTodas()
+    public ArrayList<Aeronave> listarTodas()
     {
-        for (int i=0; i<aeronaves.size(); i++)
-        {
-            System.out.println(aeronaves.get(i));
-        }
+        return aeronaves;
     }
 
     public Aeronave buscarPorCodigo(String cod)

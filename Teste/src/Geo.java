@@ -22,18 +22,19 @@ public class Geo {
 
 	public static double distancia(Geo a, Geo b)
 	{
-		double senLat = Math.sin((Math.toRadians(a.getLatitude()) - Math.toRadians(b.getLatitude()))/2);
-		senLat *= senLat;
+		double lat1 = Math.toRadians(a.getLatitude());
+		double lat2 = Math.toRadians(b.getLatitude());
+		double long1 = Math.toRadians(a.getLongitude());
+		double long2 = Math.toRadians(b.getLongitude());
 
-		double senLong = Math.sin((Math.toRadians(a.getLongitude()) - Math.toRadians(b.getLongitude()))/2);
-		senLong *= senLong;
+		double senLat = Math.sin((lat1 - lat2)/2);
 
-		double vezes = senLong * Math.cos(Math.toRadians(a.getLatitude())) * Math.cos(Math.toRadians(b.getLatitude()));
+		double senLong = Math.sin((long1 - long2)/2);
 
-		double soma = senLat + vezes;
-		soma = Math.sqrt(soma);
+		double d = Math.pow(senLat, 2) + Math.pow(senLong, 2) * Math.cos(lat1) * Math.cos(lat2);
+		d = 2 * 6371 * Math.asin(Math.sqrt(d));
 
-		return 2 * 6371 * (Math.asin(Math.sqrt(soma)));
+		return d;
 	}
 
 	public double distancia(Geo outro)
